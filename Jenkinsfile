@@ -9,7 +9,8 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'YOUR_GIT_REPO_URL'
+                git branch: 'master', url: 'git@github.com:faisal-korejo/NodeJS-Express--React-app.git
+'
             }
         }
 
