@@ -33,7 +33,7 @@ pipeline {
 
         stage('Archive Artifacts') {
             steps {
-                archiveArtifacts artifacts: 'backend/**, frontend/build/**', fingerprint: true
+                archiveArtifacts artifacts: 'backend/dist/**, frontend/build/**', fingerprint: true
                 stash name: 'backend', includes: 'backend/**'
                 stash name: 'frontend', includes: 'frontend/build/**'
             }
