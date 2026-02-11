@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SERVER="ubuntu@YOUR_SERVER_IP"
+SERVER="ubuntu@16.171.38.133"
 
 echo "Creating backup..."
 ssh $SERVER "tar -czf /var/www/backups/backend_$(date +%F_%T).tar.gz /var/www/backend || true"
