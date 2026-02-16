@@ -35,13 +35,7 @@ pipeline {
                 stash name: 'frontend', includes: 'frontend/build/**'
             }
         }
-
-        stage('Deploy') {
-            steps {
-                    sh './deploy.sh'
-                }
-            }
-        }
+    }
 
     post {
         success {
