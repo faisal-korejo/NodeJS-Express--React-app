@@ -1,9 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        SERVER = "ubuntu@16.171.38.133"
-    }
 
     stages {
 
@@ -41,7 +38,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sshagent(['deploy-key']) {
+                steps {
                     sh './deploy.sh'
                 }
             }
