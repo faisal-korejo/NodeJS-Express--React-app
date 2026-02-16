@@ -38,7 +38,6 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                steps {
                     sh './deploy.sh'
                 }
             }
